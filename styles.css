@@ -258,50 +258,24 @@ h2 {
 
 .hero-visual {
   position: relative;
-  min-height: 450px;
 }
 
-.hero-card {
-  position: absolute;
-  border-radius: 28px;
+.hero-video-frame {
+  width: min(420px, 100%);
+  margin-left: auto;
+  border-radius: 24px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #000000;
   box-shadow: var(--shadow-soft);
-  background: var(--surface);
 }
 
-.hero-card img {
+.hero-video-frame video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 620px;
   display: block;
-}
-
-.hero-card-main {
-  inset: 0 0 54px 35px;
-  transform: rotate(-2.2deg);
-}
-
-.hero-card-small {
-  width: clamp(180px, 34vw, 250px);
-  height: clamp(140px, 26vw, 190px);
-  right: -12px;
-  top: 14px;
-  border: 5px solid #ffffff;
-  transform: rotate(5.5deg);
-}
-
-.hero-chip {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding: 10px 15px;
-  border-radius: 999px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.22);
-  box-shadow: var(--shadow-card);
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #111111;
+  background: #000000;
+  object-fit: contain;
 }
 
 .about {
@@ -340,6 +314,10 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 0.93rem;
+}
+
+.about-stat p + p {
+  margin-top: 6px;
 }
 
 .section-head {
@@ -517,17 +495,22 @@ h2 {
 }
 
 .founder-photo {
-  width: 84px;
-  height: 84px;
+  width: clamp(140px, 16vw, 180px);
+  height: clamp(185px, 24vw, 230px);
   margin: 0 auto 12px;
-  border-radius: 50%;
+  border-radius: 18px;
   background: linear-gradient(145deg, #ffffff 0%, #bdbdbd 100%);
   color: #060606;
   font-weight: 700;
   display: grid;
   place-items: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.38);
+}
+
+.founder-photo-img {
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.28);
 }
 
 .founder-card h3 {
@@ -604,11 +587,12 @@ h2 {
   overflow: hidden;
   background: #000000;
   box-shadow: var(--shadow-card);
+  min-height: 320px;
 }
 
 .contact-map-frame iframe {
   width: 100%;
-  height: 360px;
+  height: 420px;
   border: 0;
   display: block;
 }
@@ -692,16 +676,8 @@ h2 {
   }
 
   .hero-visual {
-    min-height: 360px;
-  }
-
-  .hero-card-main {
-    inset: 0 8% 42px 8%;
-  }
-
-  .hero-card-small {
-    right: 5%;
-    top: -8px;
+    display: flex;
+    justify-content: center;
   }
 
   .about {
@@ -742,12 +718,8 @@ h2 {
     display: none;
   }
 
-  .hero-card-main {
-    inset: 18px 3% 36px 3%;
-  }
-
-  .hero-chip {
-    left: 16px;
+  .hero-video-frame {
+    width: min(360px, 100%);
   }
 
   .floating-whatsapp {
@@ -757,7 +729,7 @@ h2 {
   }
 
   .contact-map-frame iframe {
-    height: 280px;
+    height: 360px;
   }
 }
 
