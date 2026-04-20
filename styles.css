@@ -587,6 +587,46 @@ h2 {
   border-bottom-color: #ffffff;
 }
 
+.contact-map-wrap {
+  margin-top: 20px;
+}
+
+.contact-map-wrap h3 {
+  margin: 0 0 10px;
+  font-family: "Sora", sans-serif;
+  font-size: 1.02rem;
+  color: #ffffff;
+}
+
+.contact-map-frame {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000000;
+  box-shadow: var(--shadow-card);
+}
+
+.contact-map-frame iframe {
+  width: 100%;
+  height: 360px;
+  border: 0;
+  display: block;
+}
+
+.map-link {
+  margin-top: 10px;
+  display: inline-flex;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.map-link:hover {
+  border-bottom-color: #ffffff;
+}
+
 .floating-whatsapp {
   position: fixed;
   right: 20px;
@@ -714,6 +754,10 @@ h2 {
     right: 14px;
     bottom: 14px;
     padding: 10px 13px;
+  }
+
+  .contact-map-frame iframe {
+    height: 280px;
   }
 }
 
