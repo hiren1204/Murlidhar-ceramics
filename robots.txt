@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://murlidhar-ceramic.in/sitemap.xml
