@@ -230,6 +230,41 @@ h2 {
   background: rgba(255, 255, 255, 0.06);
 }
 
+.contact-actions .btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-actions .contact-btn-whatsapp:hover {
+  background: #25d366;
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.36);
+}
+
+.contact-actions .contact-btn-call:hover {
+  background: #0ea5e9;
+  box-shadow: 0 16px 36px rgba(14, 165, 233, 0.34);
+}
+
+.contact-actions .contact-btn-email:hover {
+  background: #ea4335;
+  box-shadow: 0 16px 36px rgba(234, 67, 53, 0.34);
+}
+
+.contact-actions .contact-btn-indiamart:hover {
+  background: #2b5fb8;
+  box-shadow: 0 16px 36px rgba(43, 95, 184, 0.36);
+}
+
+.contact-actions .contact-btn-instagram:hover {
+  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 48%, #8134af 100%);
+  box-shadow: 0 16px 36px rgba(221, 42, 123, 0.34);
+}
+
+.contact-actions .contact-btn-justdial:hover {
+  background: #f58220;
+  box-shadow: 0 16px 36px rgba(245, 130, 32, 0.34);
+}
+
 .hero-facts {
   margin: 26px 0 0;
   padding: 0;
