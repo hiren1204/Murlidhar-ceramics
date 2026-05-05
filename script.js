@@ -123,4 +123,52 @@ if (nextButton) {
 renderFeedback();
 resetFeedbackTimer();
 
+const manufacturingVideos = document.querySelectorAll(".manufacturing-frame video");
+
+const playManufacturingVideo = (video) => {
+  if (video.dataset.autoPlayState === "playing") {
+    return;
+  }
+
+  if (video.ended || video.dataset.autoPlayState === "ended") {
+    video.currentTime = 0;
+  }
+
+  video.muted = true;
+  video.playsInline = true;
+  video.dataset.autoPlayState = "playing";
+
+  const playPromise = video.play();
+  if (playPromise && typeof playPromise.catch === "function") {
+    playPromise.catch(() => {
+      video.dataset.autoPlayState = "idle";
+    });
+  }
+};
+
+manufacturingVideos.forEach((video) => {
+  video.dataset.autoPlayState = "idle";
+  video.addEventListener("ended", () => {
+    video.dataset.autoPlayState = "ended";
+    video.pause();
+  });
+});
+
+if (manufacturingVideos.length > 0) {
+  const manufacturingVideoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+          playManufacturingVideo(video);
+        }
+      });
+    },
+    { threshold: [0, 0.35, 0.75] }
+  );
+
+  manufacturingVideos.forEach((video) => manufacturingVideoObserver.observe(video));
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();
