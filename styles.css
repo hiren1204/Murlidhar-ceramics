@@ -91,27 +91,10 @@ body {
 }
 
 .brand-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.28);
-  box-shadow: var(--shadow-card);
-}
-
-.brand-text {
-  display: grid;
-  line-height: 1.2;
-}
-
-.brand-text strong {
-  font-size: 0.96rem;
-  letter-spacing: 0.01em;
-}
-
-.brand-text small {
-  font-size: 0.74rem;
-  color: var(--muted);
+  width: clamp(180px, 16vw, 250px);
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -130,17 +113,6 @@ body {
 
 .site-nav a:hover {
   color: var(--accent);
-}
-
-.header-cta {
-  text-decoration: none;
-  color: #050505;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-size: 0.84rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-card);
 }
 
 .section {
@@ -228,6 +200,39 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #f2f2f2;
   background: rgba(255, 255, 255, 0.06);
+}
+
+.hero-actions .btn:hover,
+.hero-actions .btn:focus-visible,
+.hero-actions .btn:active {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.78);
+}
+
+.hero-actions .btn:active {
+  transform: translateY(0);
+  filter: brightness(0.94) saturate(1.08);
+}
+
+.hero-actions .hero-btn-whatsapp:hover,
+.hero-actions .hero-btn-whatsapp:focus-visible,
+.hero-actions .hero-btn-whatsapp:active {
+  background: #25d366;
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.38);
+}
+
+.hero-actions .hero-btn-products:hover,
+.hero-actions .hero-btn-products:focus-visible,
+.hero-actions .hero-btn-products:active {
+  background: #c7a569;
+  box-shadow: 0 16px 36px rgba(199, 165, 105, 0.38);
+}
+
+.hero-actions .hero-btn-catalog:hover,
+.hero-actions .hero-btn-catalog:focus-visible,
+.hero-actions .hero-btn-catalog:active {
+  background: linear-gradient(135deg, #f58529 0%, #dd2a7b 48%, #8134af 100%);
+  box-shadow: 0 16px 36px rgba(221, 42, 123, 0.36);
 }
 
 .contact-actions .btn:hover {
